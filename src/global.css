@@ -59,12 +59,18 @@ pre[class*="language-"] ::selection {
     display: block;
 }
 
-li a, 
 strong a {
     color: rgb(90, 103, 216) !important;
     text-decoration: none !important;
     font-weight: 700;
 }
+
+.url-highlight {
+    color: rgb(90, 103, 216) !important;
+    text-decoration: none !important;
+    font-weight: 700;
+}
+
 
 /* 2K 해상도 (2560px) 이상 */
 @media screen and (min-width: 2560px) {

@@ -29,14 +29,17 @@
             <GithubIcon size="1.5x" />
           </a>
           <div class=".clearfix" style="min-width:260px;">
-            <a style="display:block; width:50px; height:50px; line-height:50px; float:left; padding-top: 13px;"
+            <!-- 깃허브 아이콘 -->
+            <!-- <a style="display:block; width:50px; height:50px; line-height:50px; float:left; padding-top: 13px;"
               href="https://github.com/msa-ez/platform?tab=readme-ov-file#running-on-docker-compose-with-github" target="_blank"
             >
               <GithubIcon size="1.5x" style="margin:0 auto; "/>
-            </a>
-            <div style="width:55px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
+            </a> -->
+
+            <!-- 한영 변환 -->
+            <!-- <div style="width:55px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
               <a @click="languageExchange()" style="cursor:pointer;">한국어</a>
-            </div>
+            </div> -->
             <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
               <ToggleDarkMode>
                 <template slot="default" slot-scope="{ dark }">
@@ -47,10 +50,9 @@
             </div>
             <div style="text-align:center; line-height:50px; float:left;">
               <g-link
-                to="http://www.msaez.io/"
+                to="http://modernizer-app.uengine.io/"
                 class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
-              >
-                실습하기
+              >실습하기
               </g-link>
             </div>
           </div>
@@ -104,10 +106,9 @@
 
             <div style="text-align:center; line-height:50px; float:left;">
               <g-link
-                to="http://www.msaez.io/"
+                to="http://modernizer-app.uengine.io/"
                 class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
-              >
-                실습하기
+              >실습하기
               </g-link>
             </div>
           </div>

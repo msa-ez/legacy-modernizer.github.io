@@ -24,8 +24,6 @@ query ($id: ID!) {
     timeToRead
     content
     sidebar
-    next
-    prev
     headings {
       depth
       value
@@ -56,7 +54,7 @@ export default {
     ArrowRightCircleIcon
   },
   metaInfo: {
-    title: 'msaez',
+    title: 'Legacy Modernizer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
