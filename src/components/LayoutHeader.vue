@@ -1,120 +1,113 @@
 <template>
-  <div class="py-2 border-t-2 border-ui-primary">
-    <div class="container">
-
-      <!-- PC 환경 -->
-      <div class="flex items-center justify-between -mx-2 sm:-mx-4 is-not-mobile">
-        <div class="">
-          <g-link
-            to="/"
-            class="flex items-center text-ui-primary"
-            title="Home"
-          >
-            <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
-          </g-link>
-        </div>
-        <div class="w-full px-2 sm:px-4 max-w-screen-xs">
-          <ClientOnly>
-            <Search />
-          </ClientOnly>
-        </div>
-        <div class="flex items-center justify-end px-2 sm:px-4">
-          <a v-if="settings.web" :href="settings.web" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Website" name="Website">
-            <GlobeIcon size="1.5x" />
-          </a>
-          <a v-if="settings.twitter" :href="settings.twitter" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Twitter" name="Twitter">
-            <TwitterIcon size="1.5x" />
-          </a>
-          <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
-            <GithubIcon size="1.5x" />
-          </a>
-          <div class=".clearfix" style="min-width:260px;">
-            <!-- 깃허브 아이콘 -->
-            <!-- <a style="display:block; width:50px; height:50px; line-height:50px; float:left; padding-top: 13px;"
-              href="https://github.com/msa-ez/platform?tab=readme-ov-file#running-on-docker-compose-with-github" target="_blank"
+  <div>
+    <div class="py-2 border-t-2 border-ui-primary">
+      <div class="container">
+        <!-- PC 환경 -->
+        <div class="flex items-center justify-between -mx-2 sm:-mx-4 is-not-mobile">
+          <div class="">
+            <g-link
+              to="/"
+              class="flex items-center text-ui-primary"
+              title="Home"
             >
-              <GithubIcon size="1.5x" style="margin:0 auto; "/>
-            </a> -->
-
-            <!-- 한영 변환 -->
-            <!-- <div style="width:55px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
-              <a @click="languageExchange()" style="cursor:pointer;">한국어</a>
-            </div> -->
-            <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
-              <ToggleDarkMode>
-                <template slot="default" slot-scope="{ dark }">
-                  <MoonIcon v-if="dark" size="1.5x" />
-                  <SunIcon v-else size="1.5x" />
-                </template>
-              </ToggleDarkMode>
-            </div>
-            <div style="text-align:center; line-height:50px; float:left;">
-              <g-link
-                to="http://modernizer-app.uengine.io/"
-                class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
-              >실습하기
-              </g-link>
-            </div>
+              <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
+            </g-link>
           </div>
-        </div>
-      </div>
-
-
-      <!-- 모바일 환경 -->
-      <div class="flex items-center justify-between -mx-2 sm:-mx-4 is-mobile">
-        <div class="flex">
-          <g-link
-            to="/"
-            class="flex items-center text-ui-primary"
-            title="Home"
-          >
-            <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
-          </g-link>
           <div class="w-full px-2 sm:px-4 max-w-screen-xs">
             <ClientOnly>
               <Search />
             </ClientOnly>
-        </div>
-        </div>
-        <div class="flex items-center justify-end px-2 sm:px-4">
-          <a v-if="settings.web" :href="settings.web" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Website" name="Website">
-            <GlobeIcon size="1.5x" />
-          </a>
-          <a v-if="settings.twitter" :href="settings.twitter" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Twitter" name="Twitter">
-            <TwitterIcon size="1.5x" />
-          </a>
-          <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
-            <GithubIcon size="1.5x" />
-          </a>
-          <div class=".clearfix">
-            <a style="display:block; width:50px; height:50px; line-height:50px; float:left; padding-top: 13px;"
-              href="https://github.com/msa-ez/platform?tab=readme-ov-file#running-on-docker-compose-with-github" target="_blank"
-            >
-              <GithubIcon size="1.5x" style="margin:0 auto; "/>
+          </div>
+          <div class="flex items-center justify-end px-2 sm:px-4">
+            <a v-if="settings.web" :href="settings.web" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Website" name="Website">
+              <GlobeIcon size="1.5x" />
             </a>
-            <div style="width:55px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
-              <a @click="languageExchange()" style="cursor:pointer;">한국어</a>
+            <a v-if="settings.twitter" :href="settings.twitter" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Twitter" name="Twitter">
+              <TwitterIcon size="1.5x" />
+            </a>
+            <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
+              <GithubIcon size="1.5x" />
+            </a>
+            <div class=".clearfix" style="min-width:260px;">
+              <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
+                <ToggleDarkMode>
+                  <template slot="default" slot-scope="{ dark }">
+                    <MoonIcon v-if="dark" size="1.5x" />
+                    <SunIcon v-else size="1.5x" />
+                  </template>
+                </ToggleDarkMode>
+              </div>
+              <div style="text-align:center; line-height: 50px; float:left;">
+                <g-link
+                  to="http://modernizer-app.uengine.io/"
+                  class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
+                >실습하기
+                </g-link>
+              </div>
+              <div style="text-align: center; line-height: 50px; float: left; margin-left: 5px;">
+                <button @click="$refs.contactForm.toggleForm()" class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary" style="padding: 11px 16px;">
+                  <span>문의하기</span>
+                </button>
+              </div>
             </div>
-            <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
-              <ToggleDarkMode>
-                <template slot="default" slot-scope="{ dark }">
-                  <MoonIcon v-if="dark" size="1.5x" />
-                  <SunIcon v-else size="1.5x" />
-                </template>
-              </ToggleDarkMode>
-            </div>
+          </div>
+        </div>
 
-            <div style="text-align:center; line-height:50px; float:left;">
-              <g-link
-                to="http://modernizer-app.uengine.io/"
-                class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
-              >실습하기
-              </g-link>
+        <!-- 모바일 환경 -->
+        <div class="flex items-center justify-between -mx-2 sm:-mx-4 is-mobile">
+          <div class="flex">
+            <g-link
+              to="/"
+              class="flex items-center text-ui-primary"
+              title="Home"
+            >
+              <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
+            </g-link>
+            <div class="w-full px-2 sm:px-4 max-w-screen-xs">
+              <ClientOnly>
+                <Search />
+              </ClientOnly>
+            </div>
+          </div>
+          <div class="flex items-center justify-end px-2 sm:px-4">
+            <a v-if="settings.web" :href="settings.web" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Website" name="Website">
+              <GlobeIcon size="1.5x" />
+            </a>
+            <a v-if="settings.twitter" :href="settings.twitter" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Twitter" name="Twitter">
+              <TwitterIcon size="1.5x" />
+            </a>
+            <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
+              <GithubIcon size="1.5x" />
+            </a>
+            <div class=".clearfix">
+              <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
+                <ToggleDarkMode>
+                  <template slot="default" slot-scope="{ dark }">
+                    <MoonIcon v-if="dark" size="1.5x" />
+                    <SunIcon v-else size="1.5x" />
+                  </template>
+                </ToggleDarkMode>
+              </div>
+
+              <div style="text-align:center; line-height:50px; float:left;">
+                <g-link
+                  to="http://modernizer-app.uengine.io/"
+                  class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
+                >실습하기
+                </g-link>
+              </div>
+              <div style="text-align:center; line-height:50px; float:left; margin-left: 5px;">
+                <button @click="$refs.contactForm.toggleForm()" class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary">
+                  <span>문의하기</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <ContactFormModal ref="contactForm" />
   </div>
 </template>
 
@@ -141,6 +134,7 @@ query {
 import ToggleDarkMode from "@/components/ToggleDarkMode";
 import Logo from '@/components/Logo';
 import { SunIcon, MoonIcon, GlobeIcon, GithubIcon, TwitterIcon } from "vue-feather-icons";
+import ContactFormModal from '@/components/ContactFormModal';
 
 const Search = () => import(/* webpackChunkName: "search" */ "@/components/Search").catch(error => console.warn(error));
 
@@ -153,12 +147,15 @@ export default {
     MoonIcon,
     GlobeIcon,
     GithubIcon,
-    TwitterIcon
+    TwitterIcon,
+    ContactFormModal
   },
-  data: {
-    currentUrl: null,
-    currentPath: null,
-    currentPathTwo: null
+  data() {
+    return {
+      currentUrl: null,
+      currentPath: null,
+      currentPathTwo: null
+    };
   },
 
   computed: {
