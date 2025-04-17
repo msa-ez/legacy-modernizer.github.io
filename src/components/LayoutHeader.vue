@@ -45,7 +45,7 @@
                 </g-link>
               </div>
               <div style="text-align: center; line-height: 50px; float: left; margin-left: 5px;">
-                <button @click="$refs.contactForm.toggleForm()" class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary" style="padding: 11px 16px;">
+                <button @click="$refs.contactForm.toggleForm()" class=" ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary" style="padding: 11px 16px;">
                   <span>문의하기</span>
                 </button>
               </div>
@@ -97,7 +97,7 @@
                 </g-link>
               </div>
               <div style="text-align:center; line-height:50px; float:left; margin-left: 5px;">
-                <button @click="$refs.contactForm.toggleForm()" class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary">
+                <button @click="$refs.contactForm.toggleForm()" class="ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary" style="padding: 11px 16px;">
                   <span>문의하기</span>
                 </button>
               </div>
