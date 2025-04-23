@@ -6,8 +6,17 @@
           <h1>레거시 코드의 현대화,<br>AI 기반 자동 코드 변환 솔루션</h1>
           <p class="hero-subtitle">복잡한 레거시 코드를 현대적이고 유지보수가 쉬운 자바 아키텍처로 변환하세요!</p>
           <div class="hero-buttons">
-            <g-link class="btn btn-primary" to="/#get-started" @click.native="scrollToSection('get-started')">지금 시작하기</g-link>
-            <g-link class="btn btn-secondary" to="/#how-it-works" @click.native="scrollToSection('how-it-works')">작동 방식 알아보기</g-link>
+
+            <!-- <g-link class="btn btn-primary" to="/#get-started" @click.native="scrollToSection('get-started')">지금 시작하기</g-link>
+            <g-link class="btn btn-secondary" to="/#how-it-works" @click.native="scrollToSection('how-it-works')">작동 방식 알아보기</g-link> -->
+            
+            <a href="http://modernizer-app.uengine.io/" target="_blank" class="btn btn-primary">
+              지금 시작하기
+            </a>
+            <g-link class="btn btn-secondary" to="/started/domain-driven/">
+              사용 방법 보러가기
+            </g-link>
+          
           </div>
         </div>
         <div class="hero-image">

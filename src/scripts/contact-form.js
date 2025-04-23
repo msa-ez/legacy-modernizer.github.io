@@ -63,7 +63,7 @@ export function initContactForm() {
         });
 
         // 운영용(contact계정 연결) - xgvarzyg / 테스트용 - mqapyyrq
-        const response = await fetch('https://formspree.io/f/mqapyyrq', {
+        const response = await fetch('https://formspree.io/f/xgvarzyg', {
           method: 'POST',
           body: formData,
           headers: {
