@@ -4,8 +4,9 @@
     <div v-if="showForm" class="contact-form-container">
       <div class="relative w-full p-6 bg-white rounded-lg shadow-xl">
         <div class="flex justify-between items-center mb-4">
-          <h2 class="text-2xl font-bold">문의하기</h2>
-          <button @click="toggleForm" class="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full" style="margin-top: -10px;">
+          <div></div>
+          <h2 class="text-3xl font-bold">문의하기</h2>
+          <button @click="toggleForm" class="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full" style="margin-top: -20px;">
             <XIcon size="1.5x" />
           </button>
         </div>
@@ -37,6 +38,7 @@
           <div class="flex items-center my-2 mb-2">
             <input v-model="policyAgreed" type="checkbox" required class="mr-2">
             <span class="text-sm">
+              (필수) 
               <a href="#" @click.prevent="showPrivacyPolicy = true" class="text-ui-primary" style="text-decoration: underline;">
                 개인정보 수집 및 이용
               </a>
