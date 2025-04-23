@@ -4,7 +4,7 @@
     <div v-if="showForm" class="contact-form-container">
       <div class="relative w-full p-6 bg-white rounded-lg shadow-xl">
         <div class="flex justify-between items-center mb-4">
-          <div></div>
+          <div style="width: 32px;"></div>
           <h2 class="text-3xl font-bold">문의하기</h2>
           <button @click="toggleForm" class="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full" style="margin-top: -20px;">
             <XIcon size="1.5x" />
