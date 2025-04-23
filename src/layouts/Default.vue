@@ -1,4 +1,157 @@
 <template>
+  <div class="layout">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <g-link to="/">Legacy Modernizer</g-link>
+        </div>
+        <nav class="nav">
+          <g-link class="nav-link" to="/#intro" @click.native="scrollToSection('intro')">소개</g-link>
+          <!-- <a class="nav-link" href="#features">기능</a> -->
+          <g-link class="nav-link" to="/#how-it-works" @click.native="scrollToSection('how-it-works')">작동방식</g-link>
+          <g-link class="nav-link" to="/#get-started" @click.native="scrollToSection('get-started')">시작하기</g-link>
+          <g-link class="nav-link" to="/started/domain-driven/">
+            사용 방법
+          </g-link>
+          <g-link class="nav-link" to="/#contact" @click.native="scrollToSection('contact')">문의하기</g-link>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <Footer></Footer>
+  </div>
+</template>
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
+<script>
+import Footer from '@/components/Footer';
+
+export default {
+  components: {
+    Footer
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      this.$nextTick(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const sectionTitle = element.querySelector('.section-title');
+          if (sectionTitle) {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const elementPosition = sectionTitle.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
+  }
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+/* @import '../assets/styles/global.css'; */
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  padding: 0px 5%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.logo a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--dark-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+/* 
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: var(--gray-color);
+} */
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-direction: row;
+    /* align-items: center; */
+    width: 100%;
+  }
+}
+</style>
+
+
+<!-- <template>
   <div class="antialiased text-ui-typo bg-ui-background">
     <div class="flex flex-col justify-start min-h-screen">
 
@@ -73,7 +226,6 @@ export default {
   mounted() {
     this.setHeaderHeight();
     window.addEventListener('resize', this.setHeaderHeight);
-    // DOM이 준비된 후에 복사 버튼 추가
     this.addCopyButtons();
   },
   watch: {
@@ -88,20 +240,17 @@ export default {
   methods: {
     addCopyButtons() {
         this.$nextTick(() => {
-            // 기존 복사 버튼 제거
             const existingButtons = document.querySelectorAll('.copy-button');
             existingButtons.forEach(button => button.remove());
 
-            // 모든 코드 블록 감지
             const codeBlocks = document.querySelectorAll('pre');
             codeBlocks.forEach((pre, index) => {
-                // 부모 요소 생성
+
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('pre-wrapper');
                 pre.parentNode.insertBefore(wrapper, pre);
                 wrapper.appendChild(pre);
 
-                // 복사 버튼 생성
                 const button = document.createElement('button');
                 button.innerHTML = '<img style="width:22px; height:22px;" src="https://github.com/user-attachments/assets/13d31ea7-d3a6-48ef-86a6-5aacfdd801aa" alt="Copy" />';
                 button.className = 'copy-button';
@@ -369,4 +518,4 @@ table {
   }
 }
 
-</style>
+</style> -->

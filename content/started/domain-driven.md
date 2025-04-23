@@ -2,7 +2,9 @@
 description: ''
 sidebar: 'started'
 ---
-## 수행 방법
+<div class="container mt-4 mb-4">
+
+## 사용 방법
 
 **1. [Legacy Modernizer](http://modernizer-app.uengine.io/) 에 접속합니다.**
 
@@ -98,3 +100,5 @@ sidebar: 'started'
 - Java 프로젝트 구조는 다음과 같이 구성됩니다.
     - `Command`, `Controller`, `Entity`, `Repository`, `Service`
     - 각 클래스는 실제 프로시저의 비즈니스 로직을 반영한 메서드들로 구성됩니다.
+    
+</div>

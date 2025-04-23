@@ -62,8 +62,8 @@ export function initContactForm() {
           formData.append(key, value);
         });
 
-        // formspree 테스트용 - mqapyyrq / 운영용(치윤씨 메일 연결) - mjkydzab
-        const response = await fetch('https://formspree.io/f/mjkydzab', {
+        // 운영용(contact계정 연결) - xgvarzyg / 테스트용 - mqapyyrq
+        const response = await fetch('https://formspree.io/f/mqapyyrq', {
           method: 'POST',
           body: formData,
           headers: {

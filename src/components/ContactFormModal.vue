@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- 문의하기 모달 -->
-    <div v-if="showForm" class="fixed z-[9999]">
-      <div class="relative w-full max-w-2xl p-6 mx-4 bg-white rounded-lg shadow-xl">
+    <div v-if="showForm" class="contact-form-container">
+      <div class="relative w-full p-6 bg-white rounded-lg shadow-xl">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-2xl font-bold">문의하기</h2>
           <button @click="toggleForm" class="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full" style="margin-top: -10px;">
@@ -10,25 +10,41 @@
           </button>
         </div>
         <form id="modal-contact-form" @submit.prevent="submitForm" class="space-y-4">
-          <div>
-            <label class="block mb-1 font-medium">이름</label>
-            <input v-model="formData.name" type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="text-left">
+              <label class="block mb-1 font-medium">이름 <span class="text-red-500">*</span></label>
+              <input v-model="formData.name" type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary" placeholder="이름을 입력해 주세요">
+            </div>
+            <div class="text-left mb-3">
+              <label class="block mb-1 font-medium">이메일 <span class="text-red-500">*</span></label>
+              <input v-model="formData.email" type="email" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary" placeholder="답변받으실 이메일 주소를 입력해 주세요">
+            </div>
           </div>
-          <div class="my-2">
-            <label class="block mb-1 font-medium">이메일</label>
-            <input v-model="formData.email" type="email" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="text-left">
+              <label class="block mb-1 font-medium">회사 <span class="text-red-500">*</span></label>
+              <input v-model="formData.company" type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary" placeholder="회사명 또는 소속기관을 입력해 주세요">
+            </div>
+            <div class="text-left mb-3">
+              <label class="block mb-1 font-medium">직급</label>
+              <input v-model="formData.position" type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary" placeholder="직급을 입력해 주세요">
+            </div>
           </div>
-          <div>
-            <label class="block mb-1 font-medium">문의내용</label>
-            <textarea v-model="formData.message" required rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary" style="resize: none;"></textarea>
+          <div class="text-left">
+            <label class="block mb-1 font-medium">문의내용 <span class="text-red-500">*</span></label>
+            <textarea v-model="formData.message" required rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ui-primary" placeholder="문의 내용을 입력해 주세요" style="resize: none;"></textarea>
           </div>
-          <div class="flex items-center my-2">
+          <div class="flex items-center my-2 mb-2">
             <input v-model="policyAgreed" type="checkbox" required class="mr-2">
             <span class="text-sm">
-              <a href="#" @click.prevent="showPrivacyPolicy = true" class="text-ui-primary hover:underline">개인정보 수집 및 이용</a>에 동의합니다.
+              <a href="#" @click.prevent="showPrivacyPolicy = true" class="text-ui-primary" style="text-decoration: underline;">
+                개인정보 수집 및 이용
+              </a>
+              에 동의합니다.
             </span>
           </div>
-          <button type="submit" class="w-full px-4 py-2 font-bold text-white rounded-lg bg-ui-primary hover:bg-ui-primary-dark">
+          <p v-if="policyError" class="text-sm text-red-600">{{ policyError }}</p>
+          <button type="submit" class="px-4 py-2 font-bold btn btn-primary text-white rounded-lg hover:bg-ui-primary-dark">
             문의하기
           </button>
         </form>
@@ -36,21 +52,20 @@
     </div>
 
     <!-- 개인정보 모달 -->
-    <div v-if="showPrivacyPolicy" class="fixed z-[10000]">
-      <div class="relative p-6 bg-white rounded-lg shadow-xl" style="max-width: 21rem; margin-top: 20px;">
-        <div class="flex justify-between items-center mb-4">
+    <div v-if="showPrivacyPolicy" class="privacy-modal" @click.self="showPrivacyPolicy = false">
+      <div class="privacy-modal-content">
+        <div class="privacy-modal-header">
           <h2 class="text-xl font-bold">개인정보 수집 및 이용 동의</h2>
-          <button @click="showPrivacyPolicy = false" class="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full" style="margin-top: -10px;">
-            <XIcon size="1.5x" />
-          </button>
         </div>
-        <div class="prose max-w-none">
+        <div class="privacy-modal-body">
+          <div class="prose max-w-none text-left">
             유엔진솔루션즈(이하 "회사")가 문의하신 내용에 대한 답변을 제공하기 위해 개인정보를 수집·이용하고자 하는 경우에는 ｢개인정보 보호법｣등 관계 법령에 따라 본인의 동의가 필요합니다. 
             <br>회사 제품 구매 및 컨설팅 문의 응답, 회사가 제공하는 서비스 이용과정을 위한 최소한의 개인정보를 수집하고 이용합니다.
             <br>수집된 정보는 발송 외 다른 목적으로 이용되지 않으며, 서비스가 종료될 경우 즉시 파기됩니다.
+          </div>
         </div>
-        <div class="flex justify-end mt-4">
-          <button @click="showPrivacyPolicy = false" class="px-4 py-2 font-bold text-white rounded-lg bg-ui-primary hover:bg-ui-primary-dark">
+        <div class="privacy-modal-footer">
+          <button @click="showPrivacyPolicy = false" class="px-4 py-2 font-bold btn btn-primary text-white rounded-lg hover:bg-ui-primary-dark">
             닫기
           </button>
         </div>
@@ -73,6 +88,8 @@ export default {
       formData: {
         name: '',
         email: '',
+        company: '',
+        position: '',
         message: ''
       },
       policyAgreed: false,
@@ -80,6 +97,7 @@ export default {
       fieldErrors: {
         name: false,
         email: false,
+        company: false,
         message: false
       }
     };
@@ -88,6 +106,7 @@ export default {
   methods: {
     toggleForm() {
       this.showForm = !this.showForm;
+      this.$emit('form-toggle', this.showForm);
       if (!this.showForm) {
         this.resetForm();
       }
@@ -100,7 +119,7 @@ export default {
 
     validateForm() {
       let isValid = true;
-      const requiredFields = ['name', 'email', 'message'];
+      const requiredFields = ['name', 'email', 'company', 'message'];
 
       requiredFields.forEach(field => {
         if (!this.validateField(field)) {
@@ -129,8 +148,8 @@ export default {
           formData.append(key, value);
         });
 
-        // 테스트 - mqapyyrq / 치윤씨 메일 연결(운영용) - mjkydzab
-        const response = await fetch('https://formspree.io/f/mjkydzab', { 
+        // 운영용(contact계정 연결) - xgvarzyg / 테스트용 - mqapyyrq
+        const response = await fetch('https://formspree.io/f/mqapyyrq', { 
           method: 'POST',
           body: formData,
           headers: {
@@ -141,6 +160,8 @@ export default {
         if (response.ok) {
           alert('문의가 성공적으로 전송되었습니다.');
           this.resetForm();
+          this.showForm = false; // 모달창 닫기
+          this.$emit('form-toggle', false); // 부모 컴포넌트에 상태 변경 알림
         } else {
           throw new Error('Network response was not ok');
         }
@@ -154,6 +175,8 @@ export default {
       this.formData = {
         name: '',
         email: '',
+        company: '',
+        position: '',
         message: ''
       };
       this.policyAgreed = false;
@@ -161,6 +184,7 @@ export default {
       this.fieldErrors = {
         name: false,
         email: false,
+        company: false,
         message: false
       };
       this.showForm = false;
@@ -170,11 +194,57 @@ export default {
 </script>
 
 <style scoped>
-.fixed {
+.contact-form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  border-radius: var(--border-radius);
+}
+
+.contact-form-container .relative {
+  width: 100%;
+  padding: 2rem;
+}
+
+.privacy-modal {
   position: fixed;
-  top: 100px;
-  right: 20px;
-  transform: translateY(0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-modal-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  width: 31.5rem; /* 21rem * 1.5 */
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.privacy-modal-header {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  /* border-bottom: 1px solid #e5e7eb; */
+}
+
+.privacy-modal-body {
+  padding: 0 1.5rem;
+}
+
+.privacy-modal-footer {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  /* border-top: 1px solid #e5e7eb; */
+  text-align: center;
 }
 
 button {

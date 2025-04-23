@@ -27,16 +27,18 @@ module.exports = {
           {
             firstTitle: '소개',
             firstItem: '/started/',
-            name: [
-              {
-                secondTitle: '실습',
-                secondItem: '/started/domain-driven/'
-              },
+            // name: [
+            //   {
+            //     secondTitle: '실습',
+            //     secondItem: '/started/domain-driven/'
+            //   },
               // {
               //   secondTitle: 'MSAEZ 온프렘 설치',
               //   secondItem: '/started/event-storming-learning/'
               // }
-            ]
+            // ]
+            firstTitle: '사용방법',
+            firstItem: '/started/domain-driven/',
           },
         ]
       }

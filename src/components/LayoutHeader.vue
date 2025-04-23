@@ -1,113 +1,27 @@
 <template>
   <div>
-    <div class="py-2 border-t-2 border-ui-primary">
+    <!-- <div class="py-2 border-t-2 border-ui-primary">
       <div class="container">
-        <!-- PC 환경 -->
-        <div class="flex items-center justify-between -mx-2 sm:-mx-4 is-not-mobile">
-          <div class="">
-            <g-link
-              to="/"
-              class="flex items-center text-ui-primary"
-              title="Home"
-            >
-              <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
-            </g-link>
-          </div>
-          <div class="w-full px-2 sm:px-4 max-w-screen-xs">
-            <ClientOnly>
-              <Search />
-            </ClientOnly>
-          </div>
-          <div class="flex items-center justify-end px-2 sm:px-4">
-            <a v-if="settings.web" :href="settings.web" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Website" name="Website">
-              <GlobeIcon size="1.5x" />
-            </a>
-            <a v-if="settings.twitter" :href="settings.twitter" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Twitter" name="Twitter">
-              <TwitterIcon size="1.5x" />
-            </a>
-            <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
-              <GithubIcon size="1.5x" />
-            </a>
-            <div class=".clearfix" style="min-width:260px;">
-              <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
-                <ToggleDarkMode>
-                  <template slot="default" slot-scope="{ dark }">
-                    <MoonIcon v-if="dark" size="1.5x" />
-                    <SunIcon v-else size="1.5x" />
-                  </template>
-                </ToggleDarkMode>
+        <div class="layout">
+          <header class="header">
+            <div class="container flex-between">
+              <div class="logo">
+                <g-link to="/">Legacy Modernizer</g-link>
               </div>
-              <div style="text-align:center; line-height: 50px; float:left;">
-                <g-link
-                  to="http://modernizer-app.uengine.io/"
-                  class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
-                >실습하기
-                </g-link>
-              </div>
-              <div style="text-align: center; line-height: 50px; float: left; margin-left: 5px;">
-                <button @click="$refs.contactForm.toggleForm()" class=" ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary" style="padding: 11px 16px;">
-                  <span>문의하기</span>
-                </button>
-              </div>
+              <nav class="nav">
+                <a class="nav-link" href="#intro">소개</a>
+                <a class="nav-link" href="#features">기능</a>
+                <a class="nav-link" href="#how-it-works">작동방식</a>
+                <a class="nav-link" href="#get-started">시작하기</a>
+              </nav>
             </div>
-          </div>
-        </div>
+          </header>
 
-        <!-- 모바일 환경 -->
-        <div class="flex items-center justify-between -mx-2 sm:-mx-4 is-mobile">
-          <div class="flex">
-            <g-link
-              to="/"
-              class="flex items-center text-ui-primary"
-              title="Home"
-            >
-              <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
-            </g-link>
-            <div class="w-full px-2 sm:px-4 max-w-screen-xs">
-              <ClientOnly>
-                <Search />
-              </ClientOnly>
-            </div>
-          </div>
-          <div class="flex items-center justify-end px-2 sm:px-4">
-            <a v-if="settings.web" :href="settings.web" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Website" name="Website">
-              <GlobeIcon size="1.5x" />
-            </a>
-            <a v-if="settings.twitter" :href="settings.twitter" class="hidden ml-3 sm:block" target="_blank" rel="noopener noreferrer" title="Twitter" name="Twitter">
-              <TwitterIcon size="1.5x" />
-            </a>
-            <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
-              <GithubIcon size="1.5x" />
-            </a>
-            <div class=".clearfix">
-              <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
-                <ToggleDarkMode>
-                  <template slot="default" slot-scope="{ dark }">
-                    <MoonIcon v-if="dark" size="1.5x" />
-                    <SunIcon v-else size="1.5x" />
-                  </template>
-                </ToggleDarkMode>
-              </div>
-
-              <div style="text-align:center; line-height:50px; float:left;">
-                <g-link
-                  to="http://modernizer-app.uengine.io/"
-                  class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
-                >실습하기
-                </g-link>
-              </div>
-              <div style="text-align:center; line-height:50px; float:left; margin-left: 5px;">
-                <button @click="$refs.contactForm.toggleForm()" class="ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary" style="padding: 11px 16px;">
-                  <span>문의하기</span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <ContactFormModal ref="contactForm" />
+    <!-- <ContactFormModal ref="contactForm" /> -->
   </div>
 </template>
 
@@ -185,36 +99,57 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.is-mobile {
-  display: none;
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+/* @import '../assets/styles/global.css'; */
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
 }
 
-
-
-header {
-  svg:not(.feather-search) {
-    &:hover {
-      @apply text-ui-primary;
-    }
-  }
+.header .container {
+  flex-direction: row;
 }
 
-.clearfix::after{content:""; display:block; clear:both;}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
 
 .nav-link {
-  &.active {
-    @apply text-ui-primary font-bold border-ui-primary;
-  }
+  color: var(--dark-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.nav-link:hover {
+  color: var(--primary-color);
+}
 
-@media only screen and (max-width:607px){
-  .is-mobile {
-    display: block;
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 1rem;
   }
-  .is-not-mobile {
-    display: none;
+  
+  .nav {
+    justify-content: center;
   }
 }
 </style>

@@ -1,11 +1,52 @@
-<!DOCTYPE html>
+<template>
+  <Layout>
+    <HeroSection />
+    <IntroSection />
+    <FeaturesSection />
+    <HowItWorksSection />
+    <UsageSection />
+    <ComparisonSection />
+    <GetStartedSection />
+  </Layout>
+</template>
+
+<script>
+import HeroSection from '~/components/HeroSection.vue'
+import IntroSection from '~/components/IntroSection.vue'
+import FeaturesSection from '~/components/FeaturesSection.vue'
+import HowItWorksSection from '~/components/HowItWorksSection.vue'
+import UsageSection from '~/components/UsageSection.vue'
+import ComparisonSection from '~/components/ComparisonSection.vue'
+import GetStartedSection from '~/components/GetStartedSection.vue'
+
+export default {
+  components: {
+    HeroSection,
+    IntroSection,
+    FeaturesSection,
+    HowItWorksSection,
+    UsageSection,
+    ComparisonSection,
+    GetStartedSection
+  },
+  metaInfo: {
+    title: 'Legacy Modernizer - 레거시 코드의 현대화'
+  }
+}
+</script>
+
+<style>
+/* 페이지 특정 스타일이 필요한 경우 여기에 추가 */
+</style>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<!-- 검색 관련 시작-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -15,19 +56,9 @@
   <meta property="og:image" content="https://tripllo-file.s3.ap-northeast-2.amazonaws.com/static/main4.jpg">
   <meta property="og:site_name" content="Legacy Modernizer">
   <title>Legacy Modernizer</title>
-<!-- 검색 관련 끝 -->
-  <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">-->
-  <!--    <link rel="stylesheet"-->
-  <!--          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/idea.min.css">-->
-  <!--    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>-->
+
   <link rel="stylesheet" href="https://unpkg.com/katex@0.6.0/dist/katex.min.css">
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-css.min.js" integrity="sha512-1qYok2x2Rsm2y+mrdyrp00iH7xYSgVyIQ1egDAoT7CBZ3kSzlaJK+NhWAh746NeL3gnH6dnP8FGS+3xOdwO7ig==" crossorigin="anonymous"></script>-->
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>-->
 
-  <!--    <link rel="stylesheet"-->
-  <!--          href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">-->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153107610-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -41,6 +72,5 @@
 <body>
 <div id="app"></div>
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-<!-- built files will be auto injected -->
 </body>
-</html>
+</html> -->
