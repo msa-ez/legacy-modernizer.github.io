@@ -150,8 +150,8 @@ export default {
           formData.append(key, value);
         });
 
-        // 운영용(contact계정 연결) - xgvarzyg / 테스트용 - mqapyyrq
-        const response = await fetch('https://formspree.io/f/xgvarzyg', { 
+        // 운영용(help계정 연결) - mjkydzab / 테스트용 - mqapyyrq
+        const response = await fetch('https://formspree.io/f/mjkydzab', { 
           method: 'POST',
           body: formData,
           headers: {

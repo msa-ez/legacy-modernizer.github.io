@@ -31,7 +31,7 @@
                         </a>
                         &nbsp; | &nbsp;&nbsp;
                     </div> -->
-                    <div>E-Mail: contact@uengine.org</div>
+                    <div>E-Mail: help@uengine.org</div>
                 </div>
             </div>
         </div>
