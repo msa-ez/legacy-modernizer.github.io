@@ -7,8 +7,8 @@
 module.exports = {
   siteName: 'Legacy Modernizer',
   icon: {
-    favicon: './src/img/favicon.png',
-    touchicon: './src/img/favicon.png',
+    favicon: './src/img/modernizer_icon.png',
+    touchicon: './src/img/modernizer_icon.png',
   },
   siteUrl: (process.env.SITE_URL ? process.env.SITE_URL : 'https://example.com'),
   settings: {
