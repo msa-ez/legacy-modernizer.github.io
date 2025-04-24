@@ -102,7 +102,7 @@ export default {
 }
 
 .comparison-cell {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,6 +113,7 @@ export default {
 .header-cell {
   font-weight: 700;
   font-size: 1.2rem;
+  padding: 1.2rem;
 }
 
 .feature-cell {
@@ -189,7 +190,7 @@ export default {
   }
   
   .comparison-cell {
-    padding: 1rem;
+    padding: 0.8rem;
   }
   
   .header-cell:first-child {

@@ -2,7 +2,7 @@
   <section id="how-it-works" class="how-it-works-section section">
     <div class="container">
       <h2 class="section-title">주요 기능 및 작동 방식</h2>
-      <h4 class="text-center" style="margin-bottom: 30px;">Legacy Modernizer는 세 단계의 프로세스를 통해 레거시 코드를 현대화합니다</h4>
+      <h4 class="text-center" style="margin: -1rem 0 2rem;">Legacy Modernizer는 세 단계의 프로세스를 통해 레거시 코드를 현대화합니다</h4>
       <div class="steps">
         <div class="step-item">
           <div class="step-number">1</div>
@@ -69,6 +69,22 @@
           <p>Legacy Modernizer는 오래된 레거시 코드를 현대적인 자바 코드로 변환하여 시스템을 현대화합니다.</p>
         </div>
       </div> -->
+
+      <!-- <h2 class="section-title">지원 언어 및 향후 로드맵 안내</h2> -->
+      <div class="supported-languages">
+        <h3>지원 언어 유형</h3>
+        <div class="languages-content">
+          <ul>
+            <li><b>소스 언어:</b> Oracle PL/SQL, Postgres SQL</li>
+            <li><b>타겟 언어:</b> Java Spring Boot with JPA, Python with SQL Alchemy</li>
+          </ul>
+          <p class="mt-2">
+            <b>* 향후 다양한 소스 언어와 타겟 언어 지원 예정</b><br>
+            <b>* 고객 요청 시, 원하는 소스 및 타겟 언어에 대한 커스터마이징 지원 가능</b>
+          </p>
+        </div>
+        
+      </div>
     </div>
   </section>
 </template>
@@ -82,6 +98,7 @@ export default {
 <style scoped>
 .how-it-works-section {
   /* margin-top: -3rem; */
+  margin-bottom: 3rem;
 }
 
 .steps {
@@ -151,6 +168,21 @@ export default {
   margin-bottom: 1rem;
 }
 
+.supported-languages {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  border: 1px solid #f2f2f2;
+}
+
+.languages-content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
   .step-item {
     flex-direction: column;
@@ -170,6 +202,10 @@ export default {
 
   .step-connector {
     display: none;
+  }
+
+  .supported-languages {
+    margin-top: -1rem;
   }
 }
 </style>

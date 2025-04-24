@@ -129,11 +129,14 @@ export default {
 }
 
 .intro-solution {
-  background-color: white;
+  /* background-color: white; */
   padding: 2rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   text-align: center;
+
+  background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color));
+  color: white;
 }
 
 @media (max-width: 768px) {
