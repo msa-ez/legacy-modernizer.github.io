@@ -11,6 +11,7 @@
           </button>
         </div>
         <form id="modal-contact-form" @submit.prevent="submitForm" class="space-y-4">
+          <input v-model="formData.classification" type="hidden" value="Legacy Modernizer">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="text-left">
               <label class="block mb-1 font-medium">이름 <span class="text-red-500">*</span></label>
@@ -80,6 +81,7 @@
 import { XIcon } from 'vue-feather-icons'
 
 export default {
+  name: 'ContactFormModal',
   components: {
     XIcon
   },
@@ -88,6 +90,7 @@ export default {
       showForm: false,
       showPrivacyPolicy: false,
       formData: {
+        classification: 'Legacy Modernizer',
         name: '',
         email: '',
         company: '',

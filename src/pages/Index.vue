@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo';
+import Logo from '@/components/Logo.vue';
 import { ArrowRightCircleIcon, ZapIcon, CodeIcon, MoonIcon, SearchIcon } from 'vue-feather-icons';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer.vue';
 import HeroSection from '~/components/HeroSection.vue'
 import IntroSection from '~/components/IntroSection.vue'
 import FeaturesSection from '~/components/FeaturesSection.vue'

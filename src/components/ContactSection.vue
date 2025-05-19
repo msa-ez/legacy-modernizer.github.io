@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import ContactFormModal from '@/components/ContactFormModal';
+import ContactFormModal from '@/components/ContactFormModal.vue';
 
 export default {
   name: 'GetStartedSection',
