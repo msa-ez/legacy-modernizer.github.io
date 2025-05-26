@@ -13,7 +13,7 @@
               <a href="http://modernizer-app.uengine.io/" target="_blank" class="btn btn-primary">
                 지금 시작하기
               </a>
-              <g-link class="btn btn-secondary" to="/started/domain-driven/">
+              <g-link class="btn btn-secondary" to="/started/how-to-use/">
                 사용 방법 보러가기
               </g-link>
             </div>

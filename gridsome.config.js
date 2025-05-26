@@ -30,7 +30,7 @@ module.exports = {
             // name: [
             //   {
             //     secondTitle: '실습',
-            //     secondItem: '/started/domain-driven/'
+            //     secondItem: '/started/how-to-use/'
             //   },
               // {
               //   secondTitle: 'MSAEZ 온프렘 설치',
@@ -38,7 +38,7 @@ module.exports = {
               // }
             // ]
             firstTitle: '사용방법',
-            firstItem: '/started/domain-driven/',
+            firstItem: '/started/how-to-use/',
           },
         ]
       }

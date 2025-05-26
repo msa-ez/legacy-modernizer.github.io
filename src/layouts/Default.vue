@@ -10,7 +10,7 @@
           <!-- <a class="nav-link" href="#features">기능</a> -->
           <g-link class="nav-link" to="/#how-it-works" @click.native="scrollToSection('how-it-works')">작동 방식</g-link>
           <g-link class="nav-link" to="/#get-started" @click.native="scrollToSection('get-started')">시작하기</g-link>
-          <g-link class="nav-link" to="/started/domain-driven/">
+          <g-link class="nav-link" to="/started/how-to-use/">
             사용 방법
           </g-link>
           <g-link class="nav-link" to="/#contact" @click.native="scrollToSection('contact')">문의하기</g-link>

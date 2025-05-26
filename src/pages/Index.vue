@@ -46,7 +46,7 @@ export default {
   },
   metaInfo() {
     const title = 'Legacy Modernizer - 레거시 코드의 현대화';
-    const description = 'Legacy Modernizer,레거시 코드의 현대화,AI 기반 미래지향적 코드 변환 솔루션, ANTLR, 그래프, 시각화, 자바전환';
+    const description = 'Legacy Modernizer,레거시 코드의 현대화, AI 기반 미래지향적 코드 변환 솔루션, ANTLR, 그래프, 시각화, 자바전환';
     
     return {
       title: title,
