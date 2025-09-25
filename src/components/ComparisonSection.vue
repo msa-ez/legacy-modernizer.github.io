@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="comparison-image">
+      <!-- <div class="comparison-image">
         <div class="image-container">
           <g-image src="~/img/tv-comparison.png" alt="브라운관 TV와 스마트 TV 비교" />
           <div class="image-overlay">
@@ -68,7 +68,7 @@
           </div>
         </div>
         <p class="image-caption">브라운관 TV에서 스마트 TV로의 진화처럼, 레거시 코드도 현대적인 코드로 진화할 수 있습니다.</p>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

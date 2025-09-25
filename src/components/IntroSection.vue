@@ -6,9 +6,9 @@
         <div class="intro-item legacy-item">
           <h3>레거시 시스템의 한계</h3>
           <div class="intro-icon">
-            <div class="legacy-icon"></div>
+            <div class="icon-legacy"></div>
           </div>
-          <p>오래된 브라운관 TV처럼, 레거시 코드는 제한된 기능과 복잡한 유지보수로 인해 비즈니스 성장을 방해합니다. 스토어드 프로시저와 같은 레거시 코드는 이해하기 어렵고, 수정이 어려우며, 확장성이 떨어집니다.</p>
+          <p>레거시 코드는 제한된 기능과 복잡한 유지보수로 인해 비즈니스 성장을 방해합니다. 스토어드 프로시저와 같은 레거시 코드는 이해하기 어렵고, 수정이 어려우며, 확장성이 떨어집니다.</p>
           <ul>
             <li>✔ 복잡한 코드 구조로 인한 유지보수 어려움</li>
             <li>✔ 기술 부채 증가와 개발 속도 저하</li>
@@ -19,10 +19,9 @@
         <div class="intro-item modern-item">
           <h3>현대적 시스템의 장점</h3>
           <div class="intro-icon">
-            <div class="modern-icon"></div>
-            <div class="wifi-icon"></div>
+            <div class="icon-modern"></div>
           </div>
-          <p>스마트 TV처럼, 현대적인 코드 구조는 다양한 기능과 쉬운 확장성을 제공합니다. 객체 지향 설계와 도메인 주도 개발 방식은 코드의 가독성을 높이고 유지보수를 용이하게 만듭니다.</p>
+          <p>현대적인 코드 구조는 다양한 기능과 쉬운 확장성을 제공합니다. 객체 지향 설계와 도메인 주도 개발 방식은 코드의 가독성을 높이고 유지보수를 용이하게 만듭니다.</p>
           <ul>
             <li>✔ 명확한 코드 구조와 쉬운 유지보수</li>
             <li>✔ 빠른 개발 속도와 효율적인 협업</li>
@@ -34,7 +33,8 @@
       <div class="intro-solution">
         <h3>Legacy Modernizer가 해결합니다</h3>
         <p>Legacy Modernizer는 복잡한 레거시 코드를 AI 기술을 활용하여 현대적이고 유지보수가 쉬운 자바 코드로 자동 변환합니다.
-           <br>마치 브라운관 TV에서 스마트 TV로 업그레이드하는 것처럼, 여러분의 시스템도 현대화할 수 있습니다.</p>
+           <!-- <br>마치 브라운관 TV에서 스마트 TV로 업그레이드하는 것처럼, 여러분의 시스템도 현대화할 수 있습니다. -->
+        </p>
       </div>
     </div>
   </section>
@@ -104,14 +104,13 @@ export default {
   color: white;
 }
 
-.legacy-icon {
+/* .legacy-icon {
   width: 80px;
   height: 80px;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm0 13H4V8h16v11z"/></svg>');
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .modern-icon {
   width: 80px;
   height: 80px;
@@ -119,14 +118,31 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .wifi-icon {
   width: 80px;
   height: 80px;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M13.414 19.412a1.994 1.994 0 0 0 0-2.826a1.994 1.994 0 0 0-2.828-.002a2 2 0 1 0 2.828 2.828m7.071-7.897a2 2 0 0 1-1.414-.586c-3.899-3.899-10.243-3.898-14.143 0A2 2 0 0 1 2.099 8.1c5.459-5.458 14.341-5.458 19.799 0a2 2 0 0 1-1.413 3.415M7.757 15.757a2 2 0 0 1-1.414-3.414c3.118-3.119 8.194-3.119 11.313 0a2 2 0 0 1-2.829 2.829a4.005 4.005 0 0 0-5.657 0a2 2 0 0 1-1.413.585"/></svg>');
   background-repeat: no-repeat;
   background-position: center;
+} */
+
+.icon-legacy {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="m23 12l-2.44 2.78l.34 3.68l-3.61.82l-1.89 3.18L12 21l-3.4 1.47l-1.89-3.18l-3.61-.82l.34-3.69L1 12l2.44-2.79l-.34-3.68l3.61-.81L8.6 1.54L12 3l3.4-1.46l1.89 3.18l3.61.82l-.34 3.68zm-2.67 0L18.5 9.89l.24-2.79L16 6.5l-1.42-2.43L12 5.18L9.42 4.07L8 6.5l-2.74.59l.24 2.79L3.67 12l1.83 2.1l-.24 2.8l2.74.6l1.42 2.43L12 18.81l2.58 1.11L16 17.5l2.74-.61l-.24-2.79zM11 15h2v2h-2zm0-8h2v6h-2z"/></svg>');
 }
+.icon-modern {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M3.4 18L2 16.6l7.4-7.45l4 4L18.6 8H16V6h6v6h-2V9.4L13.4 16l-4-4z"/></svg>');
+}
+
 
 .intro-solution {
   /* background-color: white; */

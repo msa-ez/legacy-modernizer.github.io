@@ -20,7 +20,8 @@
           </div>
         </div>
         <div class="hero-image">
-          <g-image src="~/img/tv-comparison.png" alt="브라운관 TV와 스마트 TV 비교" />
+          <!-- <g-image src="~/img/tv-comparison.png" alt="브라운관 TV와 스마트 TV 비교" /> -->
+          <g-image src="https://www.uengine.org/images/full-width-images/main-img-legacy.png" alt="레거시 모더나이저 화면 이미지" />
         </div>
       </div>
     </div>
@@ -85,12 +86,14 @@ export default {
 .hero-image {
   text-align: center;
   z-index: 2;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .hero-image img {
   max-width: 100%;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  /* border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow); */
 }
 
 @media (max-width: 768px) {
@@ -109,7 +112,8 @@ export default {
   
   .hero-image {
     order: 1;
-    margin-bottom: 2rem;
+    margin: -20px auto 10px;
+    width: 100%;
   }
 }
 </style>
