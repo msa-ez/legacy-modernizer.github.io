@@ -19,7 +19,7 @@
             </div>
           
              <!-- <a href="http://modernizer-app.uengine.io/" class="btn btn-primary btn-large">지금 시작하기</a> -->
-            <p class="cta-subtext">무료로 체험해보세요</p>
+            <p class="cta-subtext">무료로 체험해보세요!</p>
         </div>
         <div class="get-started-cta">
           <img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/10.png" alt="">
@@ -42,8 +42,9 @@ export default {
 }
 
 .get-started-content {
-  background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color));
-  color: white;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ccc 100%); 
+  /* background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color));
+  color: white; */
   /* background-color: white; */
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -108,7 +109,9 @@ export default {
 
 .cta-subtext {
   font-size: 0.9rem;
+  font-weight: 500;
   opacity: 0.8;
+  
 }
 
 .contact-info {

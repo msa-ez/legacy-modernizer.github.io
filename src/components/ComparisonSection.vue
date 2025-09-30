@@ -98,7 +98,7 @@ export default {
 
 .comparison-header {
   background-color: var(--dark-color);
-  color: white;
+  /* color: white; */
 }
 
 .comparison-cell {
@@ -123,7 +123,7 @@ export default {
 
 .legacy {
   background-color: var(--legacy-bg-color);
-  color: white;
+  /* color: white; */
 }
 
 .modern {

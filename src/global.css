@@ -1,6 +1,7 @@
 /* 전역 스타일 */
 :root {
-  --primary-color: #3b82f6;
+  /* --primary-color: #3b82f6; */
+  --primary-color: #1e88e5;
   --secondary-color: #f97316;
   --dark-color: #1e293b;
   --light-color: #f8fafc;
@@ -9,9 +10,12 @@
   --warning-color: #f59e0b;
   --danger-color: #ef4444;
   
-  --legacy-bg-color: #333333;
-  --modern-bg-color: #ff7700;   
-  --middle-bg-color: #c8650e; /* 더 어두움 8b501d 754923*/
+  /* --legacy-bg-color: #333333;
+  --modern-bg-color: #ff7700;    
+  --middle-bg-color: #c8650e;  */ /* 더 어두움 8b501d 754923*/
+  --legacy-bg-color: #e3e4e6;
+  --modern-bg-color: #ff7700;  
+  --middle-bg-color: #1e88e5; 
 
   --heading-font: 'Noto Sans KR', sans-serif;
   --body-font: 'Noto Sans KR', sans-serif;
@@ -106,17 +110,21 @@ img {
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
+  /* background-color: #2563eb; */
+  background-color: #3b3ad4;
   color: white;
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-color);
+  /* background-color: var(--secondary-color); */
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #ea580c;
+  background-color: var(--dark-color);
+  opacity: 0.7;
+  /* background-color: #ea580c; */
   color: white;
 }
 

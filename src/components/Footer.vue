@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- 원본 색상 코드 #1E88E5 -->
-        <div style="width:100%; padding-bottom:30px; background-color:var(--legacy-bg-color);"> 
+        <div style="width:100%; padding-bottom:30px; background-color:var(--middle-bg-color);"> 
             <div class="flex logo-style">
                 <div>
                     <g-image src="../img/uEngine_logo.png"></g-image>

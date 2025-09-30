@@ -55,8 +55,14 @@ export default {
 
 <style scoped>
 .hero-section {
-  background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color));
-  color: white;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ccc 100%); 
+  /* background-image: url('/images/hero-bg.png');
+  background-repeat: no-repeat;
+  background-position: right center; */
+  border-bottom: 1px solid #e2e3e6;
+  /* background: linear-gradient(to right, #e3e4e6, #1e88e5); */
+  /* background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color)); */
+  /* color: white; */
   padding: 5rem 0;
   position: relative;
   overflow: hidden;

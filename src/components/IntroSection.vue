@@ -6,7 +6,9 @@
         <div class="intro-item legacy-item">
           <h3>레거시 시스템의 한계</h3>
           <div class="intro-icon">
-            <div class="icon-legacy"></div>
+            <div class="icon-legacy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2m-5-4h.01M12 11v3"/></g></svg>
+            </div>
           </div>
           <p>레거시 코드는 제한된 기능과 복잡한 유지보수로 인해 비즈니스 성장을 방해합니다. 스토어드 프로시저와 같은 레거시 코드는 이해하기 어렵고, 수정이 어려우며, 확장성이 떨어집니다.</p>
           <ul>
@@ -19,7 +21,9 @@
         <div class="intro-item modern-item">
           <h3>현대적 시스템의 장점</h3>
           <div class="intro-icon">
-            <div class="icon-modern"></div>
+            <div class="icon-modern">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#fff" d="m17.713 10.128l-.246.566a.506.506 0 0 1-.934 0l-.246-.566a4.36 4.36 0 0 0-2.22-2.25l-.759-.339a.53.53 0 0 1 0-.963l.717-.319a4.37 4.37 0 0 0 2.251-2.326l.253-.611a.506.506 0 0 1 .942 0l.253.61a4.37 4.37 0 0 0 2.25 2.327l.718.32a.53.53 0 0 1 0 .962l-.76.338a4.36 4.36 0 0 0-2.219 2.251M2.828 12l4.243 4.243l-1.414 1.414L0 12l5.657-5.657L7.07 7.757zm15.515 5.657L24 12l-2.83-2.828l-1.414 1.414L21.171 12l-4.242 4.243z"/></svg>
+            </div>
           </div>
           <p>현대적인 코드 구조는 다양한 기능과 쉬운 확장성을 제공합니다. 객체 지향 설계와 도메인 주도 개발 방식은 코드의 가독성을 높이고 유지보수를 용이하게 만듭니다.</p>
           <ul>
@@ -96,12 +100,17 @@ export default {
 
 .legacy-item {
   background-color: var(--legacy-bg-color);
-  color: white;
+  /* color: white; */
 }
 
 .modern-item {
   background-color: var(--middle-bg-color);
   color: white;
+}
+
+.icon-legacy, .icon-modern {
+    width: 48px;
+    height: 48px;
 }
 
 /* .legacy-icon {
@@ -126,33 +135,36 @@ export default {
   background-position: center;
 } */
 
-.icon-legacy {
+
+
+/* .icon-legacy {
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="m23 12l-2.44 2.78l.34 3.68l-3.61.82l-1.89 3.18L12 21l-3.4 1.47l-1.89-3.18l-3.61-.82l.34-3.69L1 12l2.44-2.79l-.34-3.68l3.61-.81L8.6 1.54L12 3l3.4-1.46l1.89 3.18l3.61.82l-.34 3.68zm-2.67 0L18.5 9.89l.24-2.79L16 6.5l-1.42-2.43L12 5.18L9.42 4.07L8 6.5l-2.74.59l.24 2.79L3.67 12l1.83 2.1l-.24 2.8l2.74.6l1.42 2.43L12 18.81l2.58 1.11L16 17.5l2.74-.61l-.24-2.79zM11 15h2v2h-2zm0-8h2v6h-2z"/></svg>');
-}
-.icon-modern {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="current" d="m23 12l-2.44 2.78l.34 3.68l-3.61.82l-1.89 3.18L12 21l-3.4 1.47l-1.89-3.18l-3.61-.82l.34-3.69L1 12l2.44-2.79l-.34-3.68l3.61-.81L8.6 1.54L12 3l3.4-1.46l1.89 3.18l3.61.82l-.34 3.68zm-2.67 0L18.5 9.89l.24-2.79L16 6.5l-1.42-2.43L12 5.18L9.42 4.07L8 6.5l-2.74.59l.24 2.79L3.67 12l1.83 2.1l-.24 2.8l2.74.6l1.42 2.43L12 18.81l2.58 1.11L16 17.5l2.74-.61l-.24-2.79zM11 15h2v2h-2zm0-8h2v6h-2z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="current" d="M13 1h-2v2H9v2H7v2H5v2H3v2H1v2h2v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h-2V9h-2V7h-2V5h-2V3h-2zm0 2v2h2v2h2v2h2v2h2v2h-2v2h-2v2h-2v2h-2v2h-2v-2H9v-2H7v-2H5v-2H3v-2h2V9h2V7h2V5h2V3zm0 4h-2v6h2zm0 8h-2v2h2z"/></svg>');
+} 
+  .icon-modern {
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M3.4 18L2 16.6l7.4-7.45l4 4L18.6 8H16V6h6v6h-2V9.4L13.4 16l-4-4z"/></svg>');
-}
+} */
 
 
 .intro-solution {
-  /* background-color: white; */
+  /* background-color: white;
+  box-shadow: var(--box-shadow); */
   padding: 2rem;
   border-radius: var(--border-radius);
-  /* box-shadow: var(--box-shadow); */
   text-align: center;
-
-  background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color));
-  color: white;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ccc 100%); 
+  /* background: linear-gradient(to right, var(--legacy-bg-color), var(--modern-bg-color));
+  color: white; */
 }
 
 @media (max-width: 768px) {
